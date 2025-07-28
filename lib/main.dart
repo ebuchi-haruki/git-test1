@@ -172,8 +172,9 @@ class _TodoListScreenState extends State<TodoListScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Todoリスト'),
+        backgroundColor: Colors.black,
       ),
-      backgroundColor: Colors.yellow[100],
+      backgroundColor: Colors.black,
       body: Column(
         children: [
           Expanded(child: _buildTodoList()),
@@ -185,11 +186,13 @@ class _TodoListScreenState extends State<TodoListScreen> {
                 _sortMode == SortMode.dueDate
                     ? Icons.calendar_today
                     : Icons.sort_by_alpha,
+                    color: Colors.white,
               ),
               label: Text(
                 _sortMode == SortMode.dueDate
                     ? '期限順で表示中 → 名前順に切替'
                     : '名前順で表示中 → 期限順に切替',
+                    style: const TextStyle(color: Colors.white),
               ),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
